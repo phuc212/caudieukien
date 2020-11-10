@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>so ngay trong thang</title>
+</head>
+<body>
+<form> 
+    <table>
+        <tr>
+            <th>
+                <input type="text" id="number" name="number">
+            </th>
+            <td>
+                <button type="button" onclick="tim()" >tim so ngay </button>
+            </td>
+        </tr>
+        <tr>
+            <td id="result">ket qua</td>
+        </tr>
+    </table>
+</form>
+<script>
+    
+    function tim() {
+        let day = parseInt(document.getElementById('number').value) 
+    switch(day){
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:       
+        document.getElementById("result").innerHTML = 'thang ' + day + 'co 31 ngay'
+        break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+        document.getElementById("result").innerHTML = 'thang ' + day + 'co 30 ngay'
+       break;
+       default:
+        case 2:
+        document.getElementById("result").innerHTML = 'thang ' + day + 'co 28 hoac 29 ngay'
+        break
+        }
+    }
+
+</script>   
+</body>
+</html>
